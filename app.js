@@ -1,47 +1,31 @@
-const sayingArr = [{
-    Start: 'When nine hundred years old you reach ',
-    Middle: 'look as good ',
-    End: 'you will not.'
+const messageArr = [{
+    _character: 'Jedi Knight',
+    _ability: ['energy abosorption', 'mind control', 'moving objects with the force'],
+    _quote: ["'Try not. Do. Or do not. There is no try.'", "'It takes strength to resist the dark side. Only the weak embrace it.'", "'Confronting fear is the destiny of a Jedi.'"]
 }, {
-    Start: 'Truly wonderful ',
-    Middle: 'the mind of a child ',
-    End: 'is.'
+    _character: 'Hobbit',
+    _ability: ['walking great distances', 'eating vast amounts of food', 'cooking fantastic meals'],
+    _quote: ["'Go back...Go sideways? Impossible! Go forward? Only thing to do! On we go!'", "'Please don't cook me, kind sirs! I am a good cook myself, and cook better than I cook, if you see what I mean.'", "'Sorry! I don't want any adventures, thank you. Not today. Good morning! But please come to tea - any time you like! Why not tomorrow? Good bye!'"]
 }, {
-    Start: 'That is ',
-    Middle: 'why ',
-    End: 'you fail.'
-}, {
-    Start: 'A Jedi uses the Force ',
-    Middle: 'for knowledge and defense ',
-    End: 'never for attack.'
-}, {
-    Start: 'A Jedi ',
-    Middle: 'craves not ',
-    End: 'these things.'
-}, {
-    Start: 'Judge me ',
-    Middle: 'by my size ',
-    End: 'do you?'
-}, {
-    Start: 'Wars ',
-    Middle: 'not make ',
-    End: 'one great.'
-}, {
-    Start: 'Do ',
-    Middle: 'or do not ',
-    End: 'there is no try.'
+    _character: 'Sith Lord',
+    _ability: ['choking people with the force', 'throwing objects with the force', 'shooting lighting from your hands'],
+    _quote: ["'Peace is a lie. There is only passion.'", "'The galaxy writhes in chaos and disorder.'", "'Fear attracts the fearful...the strong...the weak...the innocent...the corrupt. Fear. Fear is my ally.'"]
 }]
 
 //console.log(sayingArr);
 
 const randomNum = () => {
-    return Math.floor(Math.random()*8);
+    return Math.floor(Math.random()*3);
 }
 
 //console.log(randomNum());
 
 const createMessage = (arr) => {
-    console.log(`Yoda says: ${arr[randomNum()].Start}${arr[randomNum()].Middle}${arr[randomNum()].End}`);
+    const characterNum = randomNum();
+    //console.log(`character: ${arr[characterNum]._character} `);
+    //console.log(`ability: ${arr[characterNum]._ability[randomNum()]} `);
+    //console.log(`quote: ${arr[characterNum]._quote[randomNum()]}`);
+    console.log(`You are a ${arr[characterNum]._character} with the ability of ${arr[characterNum]._ability[randomNum()]}, while being known for saying ${arr[characterNum]._quote[randomNum()]}`)
 }
 
-createMessage(sayingArr);
+createMessage(messageArr);
