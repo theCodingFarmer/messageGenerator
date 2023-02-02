@@ -12,19 +12,14 @@ const messageArr = [{
     _quote: ["'Peace is a lie. There is only passion.'", "'The galaxy writhes in chaos and disorder.'", "'Fear attracts the fearful...the strong...the weak...the innocent...the corrupt. Fear. Fear is my ally.'"]
 }]
 
-//console.log(sayingArr);
-
+// Randomly generate a number
 const randomNum = () => {
     return Math.floor(Math.random()*3);
 }
 
-//console.log(randomNum());
-
+//Creates a random message
 const createMessage = (arr) => {
     const characterNum = randomNum();
-    //console.log(`character: ${arr[characterNum]._character} `);
-    //console.log(`ability: ${arr[characterNum]._ability[randomNum()]} `);
-    //console.log(`quote: ${arr[characterNum]._quote[randomNum()]}`);
     console.log(`You are a ${arr[characterNum]._character} with the ability of ${arr[characterNum]._ability[randomNum()]}, while being known for saying ${arr[characterNum]._quote[randomNum()]}`)
 }
 
