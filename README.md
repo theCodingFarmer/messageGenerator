@@ -1,4 +1,4 @@
-# Mixed Messages - Character Overview Generator
+# Mixed Messages - Character Generator
 
 ## Description
 This project creates a character overview by randomly selecting a character, ability, and catch phrase. Then puts all the parts together into a message.
